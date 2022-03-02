@@ -4,6 +4,7 @@ Useful Command in Python
 
 # round(number, decimal place) 
 
-# Reversing a string using the slicing is string[::-1] this will step into the string one time in reverse. 
-# To get a substring of a string you can use the START and STOP. START [2:] will start from the 3rd string all the way to the end. 
-# STOP [:2] will strat from the 3rd string all the way to the begining. 
+# Substring in python: use the stop and start index. STOP index [3:]; START index [:2]. Stop index will get the substring from the 
+# 4th letter or index to the end of the string. Start index will get the subtring from the 1index to the begining of the string.
+
+# for Print format this link is useful: pyformat.info
