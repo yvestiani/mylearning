@@ -1,0 +1,10 @@
+Useful Command in Python
+
+ 1) Type() is use to display the datatype of the variable
+
+ 2) round(number, decimal place) 
+
+ 3) Substring in python: use the stop and start index. STOP index [3:]; START index [:2]. Stop index will get the substring from the 
+ 4th letter or index to the end of the string. Start index will get the subtring from the 1index to the begining of the string.
+
+ 4) For Print format this link is useful: pyformat.info
