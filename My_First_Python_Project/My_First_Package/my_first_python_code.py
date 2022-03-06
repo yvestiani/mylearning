@@ -17,7 +17,7 @@ print (phrase[::3])
 
 a = 'banana'
 b = 3
-d = "is 100f"
+d = "is 100f" 
 
 ''' Using float '''
 
