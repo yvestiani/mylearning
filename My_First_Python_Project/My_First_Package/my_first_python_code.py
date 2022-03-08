@@ -74,3 +74,55 @@ my_dict = {'Color': 'blue', 'Make':'Toyota', 'Year':2009, 'Features':['radio','A
 
 print (my_dict['Features'])
 print (my_dict['Features'][1])
+
+''' Change value of the key color to upper cases BLUE and change it in the my_dict as well '''
+
+color = my_dict['Color'].upper()
+print (color)
+my_dict['Color'] = color;
+my_dict.get('Color', 'No Key for that')
+print (my_dict);
+
+''' Add new key/pair '''
+
+add_new_key = {'Tires':{'types':['121/22/333', '17P']}}
+tire_type = 'Michellin'
+my_dict [tire_type] = add_new_key
+print (my_dict)
+print (my_dict ['Michellin'] ['Tires']['types'][1]);
+
+''' Return Values only '''
+print (my_dict.values());
+
+''' Return keys only '''
+print (my_dict.keys());
+
+''' Return all items '''
+print (my_dict.items());
+
+''' Learn Tuple: Tuple is like a dictionnary, the only difference is that Tuple uses parenthesis where as
+List uses square brackets '''
+
+mytuple = (1, "two", 3.0, "four", 'four')
+# count tuple
+print (mytuple.count("four"))
+
+# use index for tuple
+print ("The lenght of my Tuple is {0} and the index 2 of my tuple {1} is {2}"
+    .format(len(mytuple),  mytuple,   mytuple[2]))
+
+''' Use of sets '''
+
+myset = set()
+myset.add ('2')
+myset.add ('6')
+
+''' Really useful to remove duplicate  from list '''
+mylist4 = [1,1,1,1,1,2,2,2,2,2,3,3,3,3,3]
+myset2 = set(mylist4)
+
+print (myset2)
+print (myset)
+
+
+
