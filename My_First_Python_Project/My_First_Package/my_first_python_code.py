@@ -2,6 +2,7 @@
 I am the owner of this template
 
 '''
+from test.test_contains import myset
 print (round (19.9499959 * 28.99, 2))
 
 w=10
@@ -123,6 +124,34 @@ myset2 = set(mylist4)
 
 print (myset2)
 print (myset)
+
+''' Complex number in python '''
+
+print(complex(10, 20))  # Represents the complex number (10 + 20j)
+print(complex(2.5, -18.2))  # Represents the complex number (2.5 - 18.2j)
+
+complex_1 = complex(0, 2)
+complex_2 = complex(2, 0)
+print(complex_1)
+print(complex_2)
+
+''' Boolean in Python values are True or False in first letter in Capital '''
+
+isGreen = 'green';
+tuple_color = ('Blue', 'Green')
+
+print(tuple_color[1].__eq__(isGreen))
+
+print ("//////////////////////////////set ///////////////////////////////////////////")
+
+''' Set is different from dictionary because it does not have the key/value pair '''
+
+mysets = set(my_dict);
+print (mysets.__len__());
+
+print(mysets + '=>' + 
+      mysets[1]);
+
 
 
 
