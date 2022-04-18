@@ -149,9 +149,66 @@ print ("//////////////////////////////set //////////////////////////////////////
 mysets = set(my_dict);
 print (mysets.__len__());
 
-print(mysets + '=>' + 
-      mysets[1]);
+# print(mysets + '=>' + mysets[1]);
+      
+print ("//////////////////////////////////////////////////////// Play with List ////////////////////////////////////")
 
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
 
+thislist.append("Berries")
 
+thislist[1] = thislist[1].upper()
+
+print ([thislist[0]] + [thislist [-1]])
+
+for i in range (len(thislist)) :  
+    
+    print (thislist[i])
+
+# for i in thislist :
+''' Print the first and last value from the list to another list '''
+last = [thislist[n] for n in (0,-1)]
+print(last)
+
+thislist = ["Data", "Salmon", "Nakerel"]
+
+first_last = [thislist[n] for n in (0,1)]
+print(first_last)
+[print([thislist[n]]) for n in (0,1)]
+
+''' List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+Example:Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+newlist = [expression for item in iterable if condition == True]
+'''
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if x != 'apple']
+
+print(newlist)
+
+mylist = [x for x in range (10) if x <=5]
+
+print (mylist)
+
+mylist1 = []
+mylist2 = []
+i = 0
+while i < 10:
+ if i <= 5:
+  mylist1.append(i)
+ i += 1
+print ("mylist1 is {}" .format(mylist1))
+    
+for a in range (10):
+ if a <= 5:
+  mylist2.append(a)
+print ("mylist2 is {}" .format(mylist2)) 
+
+# mylist3 = mylist2 + mylist1
+# mylist1 = mylist1.extend(mylist2)
+print ("mylist3 is {}" .format(mylist2.append(mylist1))) 
 
