@@ -3,6 +3,9 @@ I am the owner of this template
 
 '''
 from test.test_contains import myset
+from test.test_getargs2 import TupleSubclass
+from test.test_enum import Fruit
+
 print (round (19.9499959 * 28.99, 2))
 
 w=10
@@ -208,7 +211,65 @@ for a in range (10):
   mylist2.append(a)
 print ("mylist2 is {}" .format(mylist2)) 
 
-# mylist3 = mylist2 + mylist1
+mylist3 = mylist2 + mylist1
 # mylist1 = mylist1.extend(mylist2)
-print ("mylist3 is {}" .format(mylist2.append(mylist1))) 
+print ("mylist3 is {}" .format(mylist2 + (mylist3)) +'\n') 
 
+print ("//////////////////////////////////////////////////////// Play with Tuples ////////////////////////////////////")
+
+mytuple = (3, 'Two', 'Four', 5, 5)
+mytuplelist = list(mytuple)
+mytuplelist.append(3)
+mytuplelist.insert(7, "SIX")
+mytuple = tuple(mytuplelist)
+
+thistuple = ("apple", "banana", "cherry")
+
+mytuple += thistuple
+print ("the number of 5 in tis tuple {} is/are {}".format(mytuple, mytuple.count(5)))
+       
+#Unpacking in Phyton means assigning value to variable
+fruits = tuple(("apple", "banana", "cherry", "strawberry", "raspberry"))
+(green, yellow, *red) = fruits
+print(green)
+print(yellow)
+print(red)
+
+for n in fruits:
+    print (n)
+print ("\n")
+
+n=0
+while n < len(fruits):
+    print (fruits[n])
+    n+=1
+
+#Using comprehension
+first_last_tuple = [fruits[n] for n in (0,-1)]
+print(tuple(first_last_tuple))
+
+############################## Tuple unpacking in Python ###################
+myTuple = ((1,2),(3,4),(5,6)) 
+
+(numb1, *numb2) = myTuple
+print(numb2)
+
+for numb1,numb2 in myTuple:
+    print(f"{numb1 + numb2}")
+
+'''Unpack using List '''
+myList = [(1,2),(3,4),(5,6)]  
+for numb1,numb2 in myList:
+    print(numb1 + numb2)
+    
+########################### Printing key/value for dictionary using unpacking ##############
+my_dict = {'Color': 'blue', 'Make':'Toyota', 'Year':2009, 'Features':['radio','ABS', 20, 'Power'],
+           'features_new':{'door':4, "type":'sedan', 'key':{'remote':'dual key', 'type':'electronic V2'}}}
+
+for key,values in my_dict.items():
+    print(f"{key} and {values}")
+    
+# print(my_dict["features_new"]["key"]["type"])
+
+    
+    
