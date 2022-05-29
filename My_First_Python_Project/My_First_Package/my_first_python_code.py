@@ -252,7 +252,7 @@ print(tuple(first_last_tuple))
 myTuple = ((1,2),(3,4),(5,6)) 
 
 (numb1, *numb2) = myTuple
-print(numb2)
+print(numb1)
 
 for numb1,numb2 in myTuple:
     print(f"{numb1 + numb2}")
