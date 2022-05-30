@@ -3,6 +3,8 @@ I am the owner of this template
 
 '''
 import json
+import datetime
+from uuid import uuid4
 import re
 from test.test_contains import myset
 from test.test_enum import Fruit
@@ -40,6 +42,13 @@ getdatabase = myclient.get_database('tdr')
 
 getAllCollection = getdatabase.list_collection_names()
 
+newCol = 'playwithmong'
+if newCol not in getAllCollection :
+    getdatabase.create_collection(newCol)
+    print ('Database Not Exists but created')
+else:
+    print ('Database Exists')
+
 for name in getAllCollection:
     print (name)
 getCollection = getdatabase.get_collection('sampledata')
@@ -60,5 +69,23 @@ pprint.pprint(dt)
 for key,values in dt.items():
     print(f"{key} and {values}") 
 
+'''Using insert one '''
+for insertDoc in range(0,4):
+    id = uuid4()
+    data['_id'] = str(id)
+    insertData = getCollection.insert_one(data)
+    print(id)
+
+'''Using insert Many '''
+list = list()  
+for insertDoc in range(0,4):
+    id = uuid4()
+    data['_id'] = str(id)
+    data['count'] = insertDoc
+    data['time_stamp'] = str(datetime.datetime.now())
+    data_ref = data.copy() 
+    list.insert(insertDoc, data_ref)
+    
+insertData = getCollection.insert_many(list)
 # print(getDocument)
 
