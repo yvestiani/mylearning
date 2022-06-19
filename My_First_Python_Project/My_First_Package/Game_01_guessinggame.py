@@ -38,3 +38,30 @@ returns the value as tuple and from that tuple you can unpack
 zip02 = [print (actualvalue) for item, actualvalue in enumerate(mylist01)]
 
 print(list(range(0,11,3)))
+
+print ('\n/////////////////////////////////////guessing game with function ////////////////////////')
+
+# myshuffle_list = ['O','','']
+
+def shuffle_the_list(myshuffle_list):
+   shuffle(myshuffle_list)
+   return myshuffle_list
+
+def pick_user_input():
+    userlist = [0, 1, 2]
+    guess = ''
+    while guess not in userlist:
+        guess = int(input('enter your guess. Choose either 0, 1 or 2: '))   
+    return guess               
+
+def result_of_guesses():
+    suffledlist = shuffle_the_list(['O', '', ''])
+    guess = pick_user_input()
+    
+    if suffledlist [guess] == 'O':
+        return print (f'Good Job you got it right. The ball was in the {guess} place')
+    else: 
+        return print (f'try again my friend. Next time could be better.')
+
+
+result_of_guesses()
