@@ -8,7 +8,6 @@ from uuid import uuid4
 import re
 from test.test_contains import myset
 from test.test_enum import Fruit
-from test.test_getargs2 import TupleSubclass
 import pymongo
 from bson.objectid import ObjectId #to Search document with ObjectId
 import pprint #Print Json in pretty format
